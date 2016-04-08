@@ -83,7 +83,9 @@
 %% Paper title.
 
 \title{
-Survey on Distributed File Systems
+Survey on 
+Bottlenecks and Best Practices of
+Distributed File Systems on Supercomputers
 }
 %% This is how authors are specified in the journal style
 
@@ -103,7 +105,22 @@ Survey on Distributed File Systems
 
 %% Abstract section.
 \abstract{
-This is a survey paper on distributed file systems.
+File systems are a crutial component of supercomputers.
+%
+Often, file system of a supercomputer consists of many file servers
+to provide capacity, reliability, redundency, and consistency
+required by a supercomputer.
+%
+These file servers are organized as a distributed system
+to provide functionalities of a file system.
+%
+A distributed file system can have several performance challenges,
+due to the distributed nature of the file system itself,
+and the high concurrency nature of the supercomputer system.
+%
+This survey paper identifies common performance issues in 
+the distributed file systems, 
+and explores approaches to minimize impacts of these issues.
 } % end of abstract
 
 %% Keywords that describe your work. Will show as 'Index Terms' in journal
@@ -146,8 +163,20 @@ This is a survey paper on distributed file systems.
 %% the only exception to this rule is the \firstsection command
 \firstsection{Introduction}
 \maketitle
+%
+This survey paper identifies common performance issues in 
+the distributed file systems, 
+and explores approaches to minimize impacts of these issues.
 
-Haha
+\section{Brief on Surveyed Papers}
+The following papers characterize behaviors of distributed file systems
+on supercomputers:
+\cite{Xie2012}, \cite{Henschel2012}, \cite{Crosby2009}, \cite{Borrill2009}.
+
+The following papers discuss approaches to better work with distributed 
+file systems given the characters above:
+\cite{Shipman2010}, \cite{Yu2006}, \cite{Tian2011}, \cite{Lofstead2010},
+\cite{Lofstead2009}.
 
 \bibliographystyle{abbrv}
 %%use following if all content of bibtex file should be shown
