@@ -1,0 +1,74 @@
+\documentclass[12pt,twocolumn]{IEEEtran11}
+
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\oddsidemargin -15pt
+\evensidemargin -15pt
+\leftmargin 0 pt
+\topmargin -30pt
+\textwidth = 6.9 in
+\textheight = 9.0 in
+
+\newcommand{\itembase}{\setlength{\itemsep}{0pt}}
+\newcommand{\eg}{{\it e.g., }}
+\newcommand{\ie}{{\it i.e., }}
+\graphicspath{{FIG/}}
+
+\begin{document}
+\bibliographystyle{IEEE}
+
+\title{\Large \bf 
+Survey on Bottlenecks and Best Practices of Three Implementations of
+Distributed File Systems
+}
+\author{
+Samuel Li\\
+Information and Computer Science Department\\
+University of Oregon\\
+{\em samuelli@cs.uoregon.edu}
+}
+\maketitle
+% You have to do this to suppress page numbers.  Don't ask.
+%\pagestyle{empty}
+\begin{abstract}
+File systems are a crutial component of supercomputers.
+%
+Often, file system of a supercomputer consists of many file servers
+to provide capacity, reliability, redundency, and consistency
+required by a supercomputer.
+%
+These file servers are organized as a distributed system
+to provide functionalities of a file system.
+%
+A distributed file system can have several performance challenges,
+due to the distributed nature of the file system itself,
+and the high concurrency nature of the supercomputer system.
+%
+This survey paper studies performance issues of two most widely 
+used file systems: Lustre and GPFS.
+%
+The scope of performance issues include identificatino of bottlenecks
+and best approaches to minimize impact of these bottlenecks.
+\end{abstract}
+
+%\begin{keywords} 
+%Quality Adaptive Streaming, Peer-to-Peer, Internet
+%\end{keywords}
+
+\section{Introduction}
+\label{sec:intro}
+\input{tex/intro}
+
+\section{Brief on Surveyed Papers}
+\label{sec:brief}
+\input{tex/brief}
+
+%% file citations.bib contains all the biblography
+\bibliography{main}
+\end{document}
