@@ -1,9 +1,59 @@
+%The following papers characterize behaviors of distributed file systems
+%on supercomputers:
+%\cite{Xie2012}, \cite{Henschel2012}, \cite{Crosby2009}, \cite{Borrill2009}.
 
-The following papers characterize behaviors of distributed file systems
-on supercomputers:
-\cite{Xie2012}, \cite{Henschel2012}, \cite{Crosby2009}, \cite{Borrill2009}.
+%The following papers discuss approaches to better work with distributed 
+%file systems given the characters above:
+%\cite{Shipman2010}, \cite{Yu2006}, \cite{Tian2011}, \cite{Lofstead2010},
+%\cite{Lofstead2009}.
 
-The following papers discuss approaches to better work with distributed 
-file systems given the characters above:
-\cite{Shipman2010}, \cite{Yu2006}, \cite{Tian2011}, \cite{Lofstead2010},
-\cite{Lofstead2009}.
+\subsection{Research on Lustre}
+Many research papers have focused on the performance issue of 
+Lustre file systems. 
+%
+Here is a selected collection and the main topic of each paper:
+Crosby~\cite{Crosby2009} characterized the performance of Lustre file system
+on a real supercomputer system;
+%
+Xie et al.~\cite{Xie2012} specifically characterized output performance
+with respect to a number of system parameters;
+%
+Schwan~\cite{Schwan2003} and Henschel et al.~\cite{Henschel2012} 
+demonstrate implementations of Lustre to achieve the best performance
+on real systems; and
+%
+Shipman et al.~\cite{Shipman2010} summarized real lessons learned 
+to achieve high performance on a very large scale Lustre file system.
+
+
+\subsection{Research on GPFS}
+GPFS comes with most IBM supercomputers, and also receives intense study
+in terms of its performance.
+%
+Yu et al.~\cite{Yu2006} demonstrated a highly scalable GPFS file system
+with satisfactory overall performance;
+%
+Andrews et al.~\cite{Andrews2005} researched from both theoratical 
+and practical sides of the performance of GPFS file system
+in an inter-state scale.
+%
+Further, Freitas et al.~\cite{freitas2011gpfs} reported performance 
+of GPFS file system to scan 10 billion files in 43 minutes. 
+
+
+\subsection{Research on Google File System}
+Even Google intends to keep the Google File System restrict
+to its own use, it still publishes a few papers discussing the 
+performance of Google File System.
+%
+In addition to the original paper that specifies the design of
+Google File System~\cite{ghemawat2003google},
+Chang et al.~\cite{Chang2006a} also discusses efforts to make Google
+File System better handle structured data;
+Ford et al.~\cite{Ford2010a} and Corbett et al.~\cite{Corbett2012a}
+also disscussed how Google File System achieves a global scalability.
+
+
+The rest of this survey paper will elaborate above mentioned studies 
+to provide a big picture on performance issues of parallel file systems
+and available approaches to best make use of these systems.
