@@ -37,23 +37,23 @@ University of Oregon\\
 % You have to do this to suppress page numbers.  Don't ask.
 %\pagestyle{empty}
 \begin{abstract}
-File systems are a crutial component of supercomputers.
+Filesystems are crutial components of supercomputers.
 %
-Often, file system of a supercomputer consists of many file servers
-to provide capacity, reliability, redundency, and consistency
+Often, filesystem of a supercomputer consists of many file servers
+to provide capacity, performance, and reliability
 required by a supercomputer.
 %
 These file servers are organized as a distributed system
-to provide functionalities of a file system.
+to provide functionalities of a filesystem.
 %
-A distributed file system can have several performance challenges,
-due to the distributed nature of the file system itself,
-and the high concurrency nature of the supercomputer system.
+A distributed filesystem can have several performance challenges,
+due to the distributed nature of the filesystem itself,
+and the high concurrency nature of the supercomputer applications.
 %
 This survey paper studies performance issues of three widely 
-used file systems: Lustre, GPFS, and Google File System.
+used filesystems: Google File System,GPFS, and Lustre.
 %
-The scope of performance issues include identificatino of bottlenecks
+The scope of performance issues include identificatin of bottlenecks
 and best approaches to minimize impact of these bottlenecks.
 \end{abstract}
 
@@ -65,7 +65,11 @@ and best approaches to minimize impact of these bottlenecks.
 \label{sec:intro}
 \input{tex/intro}
 
-\section{Brief on Surveyed Papers}
+\section{Architecture of Three Filesystems}
+\label{sec:architecture}
+\input{tex/architecture}
+
+\section{Briefs}
 \label{sec:brief}
 \input{tex/brief}
 
