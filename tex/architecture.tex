@@ -8,7 +8,7 @@
 \label{fig:gfs_architecture}
 \end{figure*}
 %
-The Google filesystem is the proprietary file system designed by 
+The Google file system is the proprietary file system designed by 
 Google~\cite{ghemawat2003google}.
 %
 It has a few impressive properties, such as the ability to reach a global
@@ -17,7 +17,7 @@ structured data~\cite{Chang2006a}.
 %
 However, publications are limited due to its proprietary nature. 
 %
-This section gives an overview of Google filesystem (GFS) based on the available
+This section gives an overview of Google file system (GFS) based on the available
 publications.
 
 The initial design choices of GFS are explained by 
@@ -39,7 +39,7 @@ The extra flexibility as described by the fourth item enables GFS to
 make some radical design choices, for example, it does not comply to
 any standard API.
 %
-In contrast, the other two surveyed filesystems both comply the 
+In contrast, the other two surveyed file systems both comply the 
 standard API of POSIX.
 %
 We will revisit these observations and discuss how they
@@ -54,7 +54,7 @@ multiple chunkservers; both are commodity machines.
 
 The roles of master include:
 \begin{enumerate}
-\item maintaining all filesystem metadata, including
+\item maintaining all file system metadata, including
 	namespace, access control, mapping from files to chunks, and current
 	locations of chunks;
 \item monitoring system state by sending periodical heartbeat messages and 
@@ -121,7 +121,7 @@ The overview of GFS architecture is shown in Figure~\ref{fig:gfs_architecture}.
 \label{fig:gpfs_archi}
 \end{figure}
 %
-The General Parallel File System (GPFS) from IBM is a popular filesystem
+The General Parallel File System (GPFS) from IBM is a popular file system
 that is more widely adopted than the Google File System. 
 %
 In fact, it powers some of the most powerful supercomputers in the world,
@@ -178,7 +178,7 @@ Figure~\ref{fig:gpfs_archi} provides an overview of the GPFS architecture.
 \label{fig:lustre_archi}
 \end{figure}
 %
-Lustre is an open-sourced filesystem. 
+Lustre is an open-sourced file system. 
 %
 Like GPFS, Lustre has also been used by many of the world's top supercomputers.
 %
@@ -221,7 +221,7 @@ Figure~\ref{fig:lustre_archi} provides an overview of the Lustre architecture.
 
 
 \subsection{Discussion on Three Architectures}
-The three surveyed filesystems, GFS, GPFS, and Lustre represent two 
+The three surveyed file systems, GFS, GPFS, and Lustre represent two 
 distinct architectures: architecture with a master node or 
 architecture without a master node.
 %

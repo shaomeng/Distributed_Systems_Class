@@ -39,19 +39,19 @@ University of Oregon\\
 \begin{abstract}
 Filesystems are crutial components of supercomputers.
 %
-Often, filesystem of a supercomputer consists of many file servers
+Often, file system of a supercomputer consists of many file servers
 to provide capacity, performance, and reliability
 required by a supercomputer.
 %
 These file servers are organized as a distributed system
-to provide functionalities of a filesystem.
+to provide functionalities of a file system.
 %
-A distributed filesystem can have several performance challenges,
-due to the distributed nature of the filesystem itself,
+A distributed file system can have several performance challenges,
+due to the distributed nature of the file system itself,
 and the high concurrency nature of the supercomputer applications.
 %
 This survey paper studies performance issues of three widely 
-used filesystems: Google File System,GPFS, and Lustre.
+used file systems: Google File System,GPFS, and Lustre.
 %
 The scope of performance issues include identificatin of bottlenecks
 and best approaches to minimize impact of these bottlenecks.
@@ -68,6 +68,11 @@ and best approaches to minimize impact of these bottlenecks.
 \section{Architecture of Three Filesystems}
 \label{sec:architecture}
 \input{tex/architecture}
+
+\section{Distributed File Partitions}
+\label{sec:file_partition}
+\input{tex/file_partition}
+
 
 \section{Briefs}
 \label{sec:brief}
