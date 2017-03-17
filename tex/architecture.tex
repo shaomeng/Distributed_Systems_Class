@@ -145,7 +145,7 @@ Clusters and disks are connected over a switching fabric.
 %
 The architecture is decentralized in the sense that all cluster nodes 
 have equal to the disks, and they provide equal functionalities and access
-to user applications.
+to user applications~\cite{barkes1998gpfs,Schmuck2002}.
 
 Data stored on GPFS is distributed into many stripes, and are essentially
 placed on different disks.
@@ -153,7 +153,8 @@ placed on different disks.
 This design enables parallel data access, which helps improving the overall
 I/O performance.
 %
-We will discuss more about this parallel data access later in Section~\ref{}.
+We will discuss more about this parallel data access 
+later in Section~\ref{sec:stripe_gpfs}.
 
 The locking mechanism of GPFS is mostly distributed as well with a few tasks
 performed in a centralized fashion.
@@ -180,7 +181,8 @@ Figure~\ref{fig:gpfs_archi} provides an overview of the GPFS architecture.
 %
 Lustre is an open-sourced file system. 
 %
-Like GPFS, Lustre has also been used by many of the world's top supercomputers.
+Like GPFS, Lustre has also been used by many of the world's top 
+supercomputers~\cite{Strohmaier:2006:TS:1188455.1188474}.
 %
 It is also the most intensively researched distributed file system among 
 the three. 
@@ -190,17 +192,17 @@ The Lustre file system has a similar architecture as GFS:
 one node serves as management server (MGS); 
 multiple object storage servers (OSS) actually stores data;
 management server and object storage servers are connected via
-high-speed network.
+high-speed network~\cite{Schwan2003,braamlustre}.
 %
 It should also be noted that later releases of Lustre do have support
-for multiple metadata servers to provide better reliability.
+for multiple metadata servers to provide better reliability
 
 On the management server side, it keeps all the metadata in object files,
 named metadata target (MDT).
 %
 MDTs have information filenames, directories, permissions and file layout.
 %
-The MGS also provides network request handlings for local MDTs.
+The MGS also provides network request handles for local MDTs.
 
 On the object storage server side, data is grouped as object storage targets
 (OSTs). 
@@ -213,7 +215,7 @@ even a more complex $n$ to $m$ mapping.
 The final choice of mapping scheme is based on the usage and the choice of 
 hardware. 
 %
-For example, one OSS can host two OSTs to achieve redundency if using 
+For example, one OSS can host two OSTs to achieve redundancy if using 
 commodity storage, while utilize the complex $n$ to $m$ mapping to achieve
 high performance if using enterprise-class storage arrays.
 %

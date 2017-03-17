@@ -1,19 +1,40 @@
-This survey paper identifies common performance issues in 
-the distributed file systems, 
-and explores approaches to minimize impacts of these issues.
+File systems are a crucial component of many large-scale systems, 
+namely the supercomputers and internet-based service providers.
 %
-This survey specifically looks into three popular distributed 
-file systems: Lustre, GPFS, and Google File System.
+While the computational capacity of modern supercomputers are keep growing,
+the file system performance is not keep up the pace, in terms of both
+the storage capacity and data transfer throughput.
 %
-Lustre~\cite{Schwan2003} is open-sourced and powers many of the 
-world's fastest supercomputers.
+Distributed file systems are widely used to tackle this problem.
 %
-GPFS~\cite{Schmuck2002}\cite{barkes1998gpfs} is a proprietary system owned by IBM, and
-it also powers many supercomputers.
+On the one hand, distributed file systems enables a large number of commodity
+storage devices to connect together and act like a unified storage space, 
+which expands the storage capacity.
+%
+On the other hand, distributed file systems can potentially aggregate file
+I/O operations from single storage devices together, providing a high
+data transfer throughput. 
+%
+This survey paper sheds some light on the architecture as well as various
+performance issues of distributed file systems.
+
+%This survey paper identifies common performance issues in 
+%the distributed file systems, 
+%and explores approaches to minimize impacts of these issues.
+%
+This survey paper specifically looks into three popular distributed 
+file systems: Google File System GPFS, and Lustre.
 %
 Google File System~\cite{ghemawat2003google} is designed by Google and used 
 exclusively by Google.
 %
-Due to the difference in public availability of these three systems,
-Lustre is most intensively studied by researchers, 
-and Google File System has least amount of public research results.
+GPFS~\cite{Schmuck2002,barkes1998gpfs} is a proprietary system owned by IBM, and
+it also powers many supercomputers.
+%
+Lustre~\cite{Schwan2003} is open-sourced and powers many of the 
+world's fastest supercomputers.
+%
+We will especially focused on three aspects of these file systems:
+1) different architecture design,
+2) file partitioning scheme, and 3) efforts and demonstrations to achieve
+higher performance using these three file systems.

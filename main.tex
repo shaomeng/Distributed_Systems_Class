@@ -24,8 +24,10 @@
 \bibliographystyle{IEEE}
 
 \title{\Large \bf 
-Survey on Bottlenecks and Best Practices of Three Implementations of
+Survey on Implementations and Performance of Three
 Distributed File Systems
+%Survey on Bottlenecks and Best Practices of Three Implementations of
+%Distributed File Systems
 }
 \author{
 Samuel Li\\
@@ -37,24 +39,27 @@ University of Oregon\\
 % You have to do this to suppress page numbers.  Don't ask.
 %\pagestyle{empty}
 \begin{abstract}
-Filesystems are crutial components of supercomputers.
+File systems are crucial components of supercomputers and internet-based
+service providers, such as Google.
 %
-Often, file system of a supercomputer consists of many file servers
-to provide capacity, performance, and reliability
-required by a supercomputer.
+Often, file systems consist of many file servers
+to provide capacity, performance, and reliability.
 %
-These file servers are organized as a distributed system
+They are organized as a distributed system 
 to provide functionalities of a file system.
 %
 A distributed file system can have several performance challenges,
 due to the distributed nature of the file system itself,
 and the high concurrency nature of the supercomputer applications.
 %
-This survey paper studies performance issues of three widely 
-used file systems: Google File System,GPFS, and Lustre.
+This survey paper studies architecture and performance issues of three widely 
+used file systems: Google File System, GPFS, and Lustre.
 %
-The scope of performance issues include identificatin of bottlenecks
-and best approaches to minimize impact of these bottlenecks.
+It provides the readers a better understanding of how distributed system
+works, and what to expect from a distributed file system.
+%
+%The scope of performance issues include identificatin of bottlenecks
+%and best approaches to minimize impact of these bottlenecks.
 \end{abstract}
 
 %\begin{keywords} 
@@ -65,7 +70,7 @@ and best approaches to minimize impact of these bottlenecks.
 \label{sec:intro}
 \input{tex/intro}
 
-\section{Architecture of Three Filesystems}
+\section{Architecture of Three File systems}
 \label{sec:architecture}
 \input{tex/architecture}
 
@@ -73,10 +78,33 @@ and best approaches to minimize impact of these bottlenecks.
 \label{sec:file_partition}
 \input{tex/file_partition}
 
+\section{Achieve an Even Higher Performance}
+\label{sec:performance}
+\input{tex/performance}
 
-\section{Briefs}
-\label{sec:brief}
-\input{tex/brief}
+
+\section{Conclusion}
+This paper surveys performance factors of three popular distributed 
+file systems: the Google File System (GFS), IBM General Parallel 
+File System (GPFS), and Lustre File System.
+%
+We especially focused on the 1) different architecture design,
+2) file partitioning scheme, and 3) efforts and demonstrations to achieve
+higher performance using these three file systems.
+%
+Architecture wise, both GFS and Lustre adopt a master-server mode, whereas
+GPFS adopts a decentralized architecture.
+%
+File partition scheme is more similar among these three file systems, 
+with a different in the choice of chunk size.
+%
+Higher performance is achieved by all three file systems, including 
+high robust to failures, high throughput, and high scalability to span
+thousands of miles.
+
+%\section{Briefs}
+%\label{sec:brief}
+%\input{tex/brief}
 
 %% file citations.bib contains all the biblography
 \bibliography{main}
